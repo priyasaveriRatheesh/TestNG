@@ -15,7 +15,7 @@ public class Checkbox  extends Base2{
 		agree.click();
 		}
 	@Test
-	public void isselected()//always false
+	public void isselected()//always false aano?
 	{
 		driver.navigate().to("https://demos.jquerymobile.com/1.4.5/checkboxradio-checkbox/");
 		WebElement vertical=driver.findElement(By.xpath("//label[@for='checkbox-v-2a']"));
@@ -25,13 +25,15 @@ public class Checkbox  extends Base2{
 
 	}
 	@Test
-	public void isenabled()//doubt
+	public void isenabled()
 	{
 		driver.navigate().to("https://demos.jquerymobile.com/1.4.5/checkboxradio-checkbox/");
-		WebElement disabledone=driver.findElement(By.xpath(""));
+	    WebElement disabledone=driver.findElement(By.xpath(""));
+	    disabledone.click();
 		System.out.println(disabledone.isEnabled()); 
-		WebElement iagree=driver.findElement(By.xpath("//label[text()='I agree']")); 
-		System.out.println(iagree.isEnabled()); iagree.click();
+		//WebElement iagree=driver.findElement(By.xpath("//label[text()='I agree']")); 
+		//System.out.println(iagree.isEnabled());
+		//iagree.click();
 
 	}
 	@Test
@@ -39,6 +41,7 @@ public class Checkbox  extends Base2{
 	{
 		driver.navigate().to("https://demos.jquerymobile.com/1.4.5/checkboxradio-checkbox/");
 		WebElement theam=driver.findElement(By.xpath("//label[@for='checkbox-t-2a']"));
+		theam.click();
 	    boolean var=theam.isDisplayed();
 	    System.out.println(var);
 		}
