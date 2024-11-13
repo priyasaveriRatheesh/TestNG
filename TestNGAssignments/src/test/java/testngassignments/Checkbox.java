@@ -10,36 +10,29 @@ public class Checkbox  extends Base2{
 	@Test
 	public void click()
 	{
-		driver.navigate().to("https://demos.jquerymobile.com/1.4.5/checkboxradio-checkbox/");
-		WebElement agree=driver.findElement(By.xpath("//label[@for='checkbox-mini-0']"));
-		agree.click();
+		driver.navigate().to("https://formstone.it/components/checkbox/");
+		WebElement two=driver.findElement(By.xpath("//label[@for='checkbox-2']"));
+		two.click();
 		}
 	@Test
 	public void isselected()//always false aano?
 	{
-		driver.navigate().to("https://demos.jquerymobile.com/1.4.5/checkboxradio-checkbox/");
-		WebElement vertical=driver.findElement(By.xpath("//label[@for='checkbox-v-2a']"));
-		//vertical.click();
-		boolean var=vertical.isSelected();
-		System.out.println(var);
+		 driver.navigate().to("https://formstone.it/components/checkbox/");
+		  WebElement one=driver.findElement(By.xpath("//input[@id='checkbox-1']"));
+		   System.out.println(one.isSelected());
 
 	}
 	@Test
 	public void isenabled()
 	{
-		driver.navigate().to("https://demos.jquerymobile.com/1.4.5/checkboxradio-checkbox/");
+		driver.navigate().to("https://formstone.it/components/checkbox/");
 	    WebElement disabledone=driver.findElement(By.xpath(""));
-	    disabledone.click();
-		System.out.println(disabledone.isEnabled()); 
-		//WebElement iagree=driver.findElement(By.xpath("//label[text()='I agree']")); 
-		//System.out.println(iagree.isEnabled());
-		//iagree.click();
-
+	   
 	}
 	@Test
 	public void isdisplayed()
 	{
-		driver.navigate().to("https://demos.jquerymobile.com/1.4.5/checkboxradio-checkbox/");
+		driver.navigate().to("https://formstone.it/components/checkbox/");
 		WebElement theam=driver.findElement(By.xpath("//label[@for='checkbox-t-2a']"));
 		theam.click();
 	    boolean var=theam.isDisplayed();
