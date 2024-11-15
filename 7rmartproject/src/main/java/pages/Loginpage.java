@@ -18,10 +18,10 @@ PageFactory.initElements(driver,this);//class pagefactory and metod initelements
 	@FindBy(xpath="//input[@name='password']") private WebElement password;
 	@FindBy(xpath="//button[@type='submit']") private WebElement loginbutton;
 	@FindBy(xpath="//p[text()='Dashboard']") private WebElement dashboard;
-	@FindBy(css= "alert.alert-danger.alert-dismissible")private WebElement alert;
+	@FindBy(xpath="//div[@class='alert alert-danger alert-dismissible']") private WebElement alert;
+	
 
-
-public void enterUsernameOnUserNameField(String usernamevaluepassing)
+public void enterUsernameOnUserNameField(String usernamevaluepassing)//avdunn pass cheyunnat store akunnat usernamevaluepassing
 {
 	// webelement name is username
 	username.sendKeys(usernamevaluepassing);
@@ -34,14 +34,15 @@ public void clickOnLoginbutton()
 {
 	loginbutton.click();
 }
-public String alertdisplayed()
-{
-	return alert.getText();
-}
 
 	public boolean ishomepagedisplayed()
 	{
 		return dashboard.isDisplayed();
 	}
+	public boolean alertdisplayed()
+	{
+		return alert.isDisplayed();
+	}
+
 	
 }

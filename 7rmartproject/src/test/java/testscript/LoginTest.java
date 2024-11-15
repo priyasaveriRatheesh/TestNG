@@ -24,14 +24,37 @@ public class LoginTest extends Base {//here claass extending to base class bcos 
 	public void verifyIfTheUserIsAbleToLoginWithValidUsernameAndInvalidPassword()
 	{
 	String usernamevalue="admin";
-	String passwordvalue="admin11";
+	String passwordvalue="admi11";
 	Loginpage objofloginpage=new Loginpage(driver);
 	objofloginpage.enterUsernameOnUserNameField(usernamevalue);
 	objofloginpage.enterPasswordOnpasswordField(passwordvalue);
 	objofloginpage.clickOnLoginbutton();
-	String displayedText=objofloginpage.alertdisplayed();
-	boolean text=driver.getTitle().equalsIgnoreCase(displayedText);
-	Assert.assertTrue(text,"Invalid Username/Password");
-		}
+	boolean alertvariable=objofloginpage.alertdisplayed();
+	Assert.assertTrue(alertvariable,"Alert not displayed");	
+
+			}
+
+ @Test
+	public void verifyTheUserIsAbleToLoginUsingIncorrectUsernameAndValidPassword() {
+		String usernamevalue="dmin";
+		String passwordvalue="admin";
+		Loginpage objofloginpage=new Loginpage(driver);
+		objofloginpage.enterUsernameOnUserNameField(usernamevalue);
+		objofloginpage.enterPasswordOnpasswordField(passwordvalue);
+		objofloginpage.clickOnLoginbutton();
+		boolean alertvariable=objofloginpage.alertdisplayed();
+		Assert.assertTrue(alertvariable,"Alert not displayed");	
+	}
+@Test
+	public void verifyTheUserIsAbleToLoginUsingIncorrectCredentials() {
+		String usernamevalue="dmin";
+		String passwordvalue="dmin";
+		Loginpage objofloginpage=new Loginpage(driver);
+		objofloginpage.enterUsernameOnUserNameField(usernamevalue);
+		objofloginpage.enterPasswordOnpasswordField(passwordvalue);
+		objofloginpage.clickOnLoginbutton();
+		boolean alertvariable=objofloginpage.alertdisplayed();
+		Assert.assertTrue(alertvariable,"Alert not displayed");	
+	}
 
 }
