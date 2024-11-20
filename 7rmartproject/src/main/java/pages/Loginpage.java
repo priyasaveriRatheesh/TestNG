@@ -1,6 +1,5 @@
 package pages;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -14,6 +13,11 @@ this.driver=driver;
 PageFactory.initElements(driver,this);//class pagefactory and metod initelements and parameters 
 //page factory is using to inizilaze elements to driver
 	}
+	    //WebElement username=driver.findElement(By.xpath("//input[@name='username']"));
+		//WebElement password=driver.findElement(By.xpath("//input[@name='password']"));
+		//WebElement signinbutton=driver.findElement(By.xpath("//button[@type='submit']"));
+		//WebElement dashboard=driver.findElement(By.xpath("//p[text()='Dashboard']"));
+		
 	@FindBy(xpath="//input[@name='username']") private WebElement username;//pagefactory use cheytal findby annotaionuse aakkm
 	@FindBy(xpath="//input[@name='password']") private WebElement password;
 	@FindBy(xpath="//button[@type='submit']") private WebElement loginbutton;
@@ -39,7 +43,7 @@ public void clickOnLoginbutton()
 	{
 		return dashboard.isDisplayed();
 	}
-	public boolean alertdisplayed()
+	public boolean isalertdisplayed()
 	{
 		return alert.isDisplayed();
 	}
