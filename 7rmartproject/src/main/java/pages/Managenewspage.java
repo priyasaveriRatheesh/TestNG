@@ -11,22 +11,18 @@ public class Managenewspage {
 	{
 this.driver=driver;
 PageFactory.initElements(driver,this);}
-	@FindBy(xpath="//input[@name='username']") private WebElement loginusername;//pagefactory use cheytal findby annotaionuse aakkm
+	@FindBy(xpath="//input[@name='username']") private WebElement loginusername;
 	@FindBy(xpath="//input[@name='password']") private WebElement loginpassword;
 	@FindBy(xpath="//button[@type='submit']") private WebElement loginbutton;
 	
 	
-	@FindBy(css="a.small-box-footer[href='https://groceryapp.uniqassosiates.com/admin/list-news']")private WebElement moreinfobutton;
-	@FindBy(xpath="//a[@href='https://groceryapp.uniqassosiates.com/admin/news/edit?edit=2045&page_ad=1']")private WebElement deleteicon;
-	@FindBy(xpath="//input[@id='username']")private WebElement usernameupdate;
-	@FindBy(xpath="//input[@id='password']")private WebElement passwordupdate;
-	@FindBy(xpath="//select[@id='user_type']")private WebElement usertypeupdate;
-	@FindBy(xpath="//button[@name='Update']")private WebElement updatebutton;
-	@FindBy(xpath="//h5[text()=' Alert!']")private WebElement alert;
+	@FindBy(css="a.small-box-footer[href='https://groceryapp.uniqassosiates.com/admin/list-news']") private WebElement moreinfobutton;
+	@FindBy(xpath="//a[@href='https://groceryapp.uniqassosiates.com/admin/news/delete?del=2002&page_ad=1']") private WebElement deleteicon;
+	@FindBy(xpath="//h5[text()=' Alert!']") private WebElement alert;
 	
 
 
-public void enterUsernameOnUserNameField(String usernamevaluepassing)//avdunn pass cheyunnat store akunnat usernamevaluepassing
+public void enterUsernameOnUserNameField(String usernamevaluepassing)
 {
 	loginusername.sendKeys(usernamevaluepassing);
 }
@@ -37,5 +33,22 @@ public void enterPasswordOnpasswordField(String passwordvaluepassing)
 public void clickOnLoginbutton()
 {
 	loginbutton.click();
+	}
+
+
+public void clickonmoreinfobutton()
+{
+	moreinfobutton.click();
+}
+public void clickondeletebutton()
+{
+	deleteicon.click();
+	driver.switchTo().alert().dismiss();
+	//driver.switchTo().alert().accept();
+	
+}
+public boolean isalertdisplayed()
+{
+	return alert.isDisplayed();
 }
 }

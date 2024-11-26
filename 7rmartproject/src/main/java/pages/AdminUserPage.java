@@ -6,6 +6,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
+import utilities.Pageutilities;
+
 public class AdminUserPage {
 		WebDriver driver;
 		public  AdminUserPage(WebDriver driver)
@@ -19,7 +21,7 @@ public class AdminUserPage {
 		@FindBy(xpath="//button[@type='submit']") private WebElement loginbutton;
 		
 		@FindBy(css="a.small-box-footer[href='https://groceryapp.uniqassosiates.com/admin/list-admin']")private WebElement moreinfobutton;
-		@FindBy(xpath="//a[@href='https://groceryapp.uniqassosiates.com/admin/user/edit?edit=10756&page_ad=1']")private WebElement updateicon;
+		@FindBy(xpath="//a[@href='https://groceryapp.uniqassosiates.com/admin/user/edit?edit=10773&page_ad=1']")private WebElement updateicon;
 		@FindBy(xpath="//input[@id='username']")private WebElement usernameupdate;
 		@FindBy(xpath="//input[@id='password']")private WebElement passwordupdate;
 		@FindBy(xpath="//select[@id='user_type']")private WebElement usertypeupdate;
@@ -27,7 +29,7 @@ public class AdminUserPage {
 		@FindBy(xpath="//h5[text()=' Alert!']")private WebElement alert;
 
 				 		 	 
-		public void enterUsernameOnUserNameField(String usernamevaluepassing)//avdunn pass cheyunnat store akunnat usernamevaluepassing
+		public void enterUsernameOnUserNameField(String usernamevaluepassing)
 		{
 			loginusername.sendKeys(usernamevaluepassing);
 		}
@@ -53,7 +55,7 @@ public class AdminUserPage {
         }
 	   public void enterupdatedusername(String updatedusernamepassing)
 	   {
-		   usernameupdate.clear();
+		   usernameupdate.clear();//to clear the field
 		   usernameupdate.sendKeys(updatedusernamepassing);
 	    }
 	   public void updatepassword( String updatedpasswordpassing)
@@ -61,12 +63,16 @@ public class AdminUserPage {
 		   passwordupdate.clear();
 		   passwordupdate.sendKeys(updatedpasswordpassing);
      	}
-	  public void selectvalueofusertype(int udatedUsertypepassing)
+	  public void selectvalueofusertype(String usertypeupdatepassing)
 	   {
 		  
-		  Select selectobj=new Select(usertypeupdate);
-		  selectobj.selectByIndex(udatedUsertypepassing);
-		
+		 // Select selectobj=new Select(usertypeupdate);
+		 // selectobj.selectByIndex(usertypeupdatepassing);
+		//  selectobj.selectByValue(usertypeupdatepassing);
+		 Pageutilities Pagetilitiesobj=new Pageutilities();
+	     Pagetilitiesobj.selectByValue(usertypeupdate, usertypeupdatepassing);
+		// Pagetilitiesobj.selectByValue(usertypeupdate, usertypeupdatepassing);
+		  		
 	    }
 	  
 	public void clickonupdatedetailsbutton()

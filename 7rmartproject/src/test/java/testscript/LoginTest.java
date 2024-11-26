@@ -7,8 +7,8 @@ import org.testng.Assert;
 import pages.Loginpage;
 import utilities.ExelUtilities;
 
-public class LoginTest extends Base {//here claass extending to base class bcos we need to launch chromedriver
-	@Test
+public class LoginTest extends Base {//here claass extending to base class  to launch chromedriver
+	@Test(retryAnalyzer=retry.Retry.class)//for re execution
 	public void verifyTheUserisAbletologinusingvalidcredentials() throws IOException
 	{
 		//String usernamevalue="admin";

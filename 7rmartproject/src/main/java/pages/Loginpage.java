@@ -18,7 +18,7 @@ PageFactory.initElements(driver,this);//class pagefactory and metod initelements
 		//WebElement signinbutton=driver.findElement(By.xpath("//button[@type='submit']"));
 		//WebElement dashboard=driver.findElement(By.xpath("//p[text()='Dashboard']"));
 		
-	@FindBy(xpath="//input[@name='username']") private WebElement username;//pagefactory use cheytal findby annotaionuse aakkm
+	@FindBy(xpath="//input[@name='username']") private WebElement username;//pagefactory use cheytal findby annotaions use aakkm
 	@FindBy(xpath="//input[@name='password']") private WebElement password;
 	@FindBy(xpath="//button[@type='submit']") private WebElement loginbutton;
 	@FindBy(xpath="//p[text()='Dashboard']") private WebElement dashboard;
