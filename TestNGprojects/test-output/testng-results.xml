@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="3" total="4" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-11-25T09:32:24 IST" name="Default suite" finished-at="2024-11-25T09:32:31 IST" duration-ms="7409">
+    <groups>
+    </groups>
+    <test started-at="2024-11-25T09:32:24 IST" name="Default test" finished-at="2024-11-25T09:32:31 IST" duration-ms="7409">
+      <class name="testscript.Assertion">
+        <test-method is-config="true" signature="initializebrowser()[pri:0, instance:testscript.Assertion@7bab3f1a]" started-at="2024-11-25T09:32:24 IST" name="initializebrowser" finished-at="2024-11-25T09:32:30 IST" duration-ms="6407" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializebrowser -->
+        <test-method signature="asserttrue()[pri:0, instance:testscript.Assertion@7bab3f1a]" started-at="2024-11-25T09:32:30 IST" name="asserttrue" finished-at="2024-11-25T09:32:31 IST" duration-ms="966" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- asserttrue -->
+        <test-method is-config="true" signature="quitandclose()[pri:0, instance:testscript.Assertion@7bab3f1a]" started-at="2024-11-25T09:32:31 IST" name="quitandclose" finished-at="2024-11-25T09:32:31 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitandclose -->
+      </class> <!-- testscript.Assertion -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
